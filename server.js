@@ -29,6 +29,7 @@ app.post('/register', async (req, res) => {
   const user = await User.findOne({ username }).exec();
 
   if (user) {
+    res.status(500)
     res.json({
       message: 'user already exists'
     });
@@ -47,6 +48,7 @@ app.post('/login', async (req, res) => {
     const user = await User.findOne({ username }).exec();
   
     if (!user || user.password !== password)  {
+      res.status(500)
       res.json({
         message: 'invalid login'
       });
