@@ -46,7 +46,7 @@ export default function Register(){
   
     return(
       <div>        
-      <Form>
+      <Form onSubmit={register}>
         <h1 className="text-center text-info">Register</h1>
         {error && <span style={{color: 'red'}}>{error}</span>}
         <div className="form-group">

@@ -46,7 +46,7 @@ export default function Login(){
 
   return(
     <div>      
-      <Form>
+      <Form onSubmit={login}>
         <h1 className="text-center text-info">Login</h1>
         {error && <span style={{color: 'red'}}>{error}</span>}
         <div className="form-group">
